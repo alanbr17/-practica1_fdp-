@@ -1,3 +1,22 @@
-Alan
-323000662
-yovis17ferrari@gmail.com
+#include <stdio.h>
+
+int main() {
+    int num;
+    
+    printf("Ingresa un número entero: ");
+    scanf("%d", &num);
+    
+    // Si el número es negativo, lo hacemos positivo
+    if (num < 0) {
+        num = -num;
+    }
+    
+    // Encontrar el primer dígito dividiendo entre 10 hasta que quede un solo dígito
+    while (num >= 10) {
+        num /= 10;
+    }
+    
+    printf("El primer dígito es: %d\n", num);
+    
+    return 0;
+}
